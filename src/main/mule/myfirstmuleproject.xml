@@ -4,11 +4,11 @@
 	xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
 http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd">
-	<http:listener-config name="HTTP_Listener_config" doc:name="HTTP Listener config" doc:id="2d878f7e-2979-4db6-bb1e-599b4b81e095" >
+	<http:listener-config name="HTTP_Listener_config" doc:name="HTTP Listener config" doc:id="09ea86f2-5c9b-48ac-ac12-05c65f1a907f" >
 		<http:listener-connection host="0.0.0.0" port="8081" />
 	</http:listener-config>
-	<flow name="helloworldFlow" doc:id="dc185daa-aeaa-47c6-aaf5-8cb3d3c675c5" >
-		<http:listener doc:name="Listener" doc:id="7b72d713-3024-40b1-875c-f8c92fb44321" config-ref="HTTP_Listener_config" path="/helloworld"/>
-		<set-payload value='#["Hello World"]' doc:name="Set Payload" doc:id="9922cd19-222c-45c7-be91-284b5a22416a" />
+	<flow name="myfirstmuleprojectFlow" doc:id="fef07e55-d690-462e-9a42-cd5df3119935" >
+		<http:listener doc:name="Listener" doc:id="8bde40f1-f020-43ff-b91e-19ee323aca07" config-ref="HTTP_Listener_config" path="/MyFirstMuleProject"/>
+		<set-payload value='#["My First Mule Project"]' doc:name="Set Payload" doc:id="08464dec-788c-4d12-ac9a-1cb7eb4674c4" />
 	</flow>
 </mule>
